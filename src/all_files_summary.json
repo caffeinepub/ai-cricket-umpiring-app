@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko backend storing uploaded videos, tracking processing status, camera mode, and saving analysis results using map-based storage.",
+  "feature_evidence.json": "Feature evidence report mapping features to affected files, components, tests, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten summaries of frontend files describing functionality, styling, and optimizations.",
+  "frontend/index.css": "Tailwind base/theme variables defining light/dark color tokens and global styling rules.",
+  "frontend/index.html": "HTML entry point setting page title and loading the React app.",
+  "frontend/src/App.tsx": "Main React app wiring theme provider, React Query, header/footer, and routing between capture and analysis views.",
+  "frontend/src/components/AnalysisView.tsx": "Video analysis UI with playback controls, mock real‑time decisions, trajectory data generation, and cleanup of analysis intervals.",
+  "frontend/src/components/Footer.tsx": "Footer with anime‑styled visuals and caffeine.ai attribution.",
+  "frontend/src/components/Header.tsx": "Animated header with MR.AI UMPIRE branding and system‑aware theme toggle.",
+  "frontend/src/components/UploadSection.tsx": "Empty placeholder component with no implementation.",
+  "frontend/src/components/VerdictCard.tsx": "Renders a styled card displaying a verdict’s text, confidence, and reasoning with color-coded visuals.",
+  "frontend/src/components/VideoCapture.tsx": "Provides camera and upload video capture functionality with recording, mode switching, and error handling.",
+  "frontend/src/components/VisualizationPanel.tsx": "Shows a real-time SVG visualization of ball trajectory based on frame data and current playback time.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor tied to Internet Identity, refreshing dependent queries when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements Internet Identity authentication context, loading stored identities and managing login state.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for uploading videos, polling status, retrieving results, and updating camera mode via the backend actor.",
+  "frontend/src/index.css": "Defines Tailwind layers and extensive OKLCH CSS variables for light/dark themes and anime-style cricket colors.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and the InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind config enabling dark mode, custom color tokens mapped to CSS variables, container settings, and plugin integrations.",
+  "project_state.json": "Metadata file describing project state, features, issues, and pending requests for the MR.AI UMPIRE app."
+}

@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component with QueryClient configuration, theme provider, routing between video capture and analysis views, and proper object URL cleanup to prevent memory leaks.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for backend operations including video upload, status polling, analysis results fetching, result storage, camera mode retrieval and updates with proper cache invalidation.",
+  "frontend/src/components/Header.tsx": "Application header with \"MR.AI UMPIRE\" branding, theme toggle using resolvedTheme to correctly handle system theme, and anime-style gradient styling.",
+  "frontend/src/components/Footer.tsx": "Footer component with anime-styled copyright notice, pulsing heart icon in anime pink, and caffeine.ai attribution link with anime color transitions.",
+  "frontend/src/components/UploadSection.tsx": "Video upload interface with vibrant cricket-themed drag-and-drop input featuring background imagery, animated focus effects with glowing green edges, hover animations with scale-up effects, and cricket color palette (turf green, pitch brown, stump red).",
+  "frontend/src/components/AnalysisView.tsx": "Real-time video analysis view with stable frame-by-frame AI decision generation, fixed interval cleanup to prevent stacking timers, synchronized video state management, and proper event handlers for play/pause/ended states.",
+  "frontend/src/components/VerdictCard.tsx": "Optimized verdict card component with responsive text sizing, improved mobile layout, and stable anime-style glow effects with proper color-coded styling.",
+  "frontend/src/components/VisualizationPanel.tsx": "Optimized live visualization panel with memoized frame calculations, responsive SVG rendering with preserveAspectRatio, and improved mobile layout for trajectory paths and snicko waveforms.",
+  "frontend/src/index.css": "Optimized global styles with performance-enhanced animations using will-change properties, stable anime-style cricket colors, and improved camera preview styles with smooth transitions.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with complete anime-style color palette (sky gradients, turf, pink/cyan/yellow accents, glow colors) integrated into the design system for consistent vibrant anime theming throughout the application.",
+  "frontend/src/components/VideoCapture.tsx": "Video capture component with camera recording and file upload, improved cleanup on unmount/cancel to prevent memory leaks, proper MediaRecorder state management, and \"MR.AI UMPIRE\" branding in hero section.",
+  "frontend/src/main.tsx": "Application entry point with InternetIdentityProvider wrapper, removed duplicate QueryClientProvider to prevent conflicting React Query caches.",
+  "frontend/index.html": "HTML entry point with updated document title \"MR.AI UMPIRE\"."
+}

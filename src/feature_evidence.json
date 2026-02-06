@@ -1,0 +1,69 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-perform-an-end-to-end-qa-pass-of-the-app-camera-recording-upload-analysis-playback-theme-toggle-navigation-back-flow-and-fix-any-runtime-errors-broken-ui-states-or-obvious-regressions-found-during-manual-testing",
+      "featureTitle": "Perform an end-to-end QA pass of the app (camera/recording, upload, analysis playback, theme toggle, navigation/back flow) and fix any runtime errors, broken UI states, or obvious regressions found during manual testing.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/AnalysisView.tsx",
+        "frontend/src/components/VideoCapture.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "camera@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-fix-branding-ui-text-inconsistencies-so-the-app-name-is-displayed-as-mr-ai-umpire-in-the-header-and-any-other-visible-places-instead-of-the-old-name",
+      "featureTitle": "Fix branding/UI text inconsistencies so the app name is displayed as \"MR.AI UMPIRE\" in the header (and any other visible places) instead of the old name.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/VideoCapture.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "camera@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-resolve-obvious-frontend-code-issues-that-can-cause-glitches-remove-or-implement-empty-placeholder-components-that-are-part-of-the-current-build-e-g-an-empty-component-file-and-ensure-the-theme-toggle-behaves-correctly-when-the-theme-is-set-to-system",
+      "featureTitle": "Resolve obvious frontend code issues that can cause glitches: remove or implement empty placeholder components that are part of the current build (e.g., an empty component file), and ensure the theme toggle behaves correctly when the theme is set to \"system\".",
+      "files": [
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "camera@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

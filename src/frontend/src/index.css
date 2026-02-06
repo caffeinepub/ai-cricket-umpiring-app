@@ -1,0 +1,440 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        --background: 0.98 0.02 280;
+        --foreground: 0.15 0.02 280;
+        --card: 0.99 0.02 280;
+        --card-foreground: 0.15 0.02 280;
+        --popover: 0.99 0.02 280;
+        --popover-foreground: 0.15 0.02 280;
+        --primary: 0.55 0.20 280;
+        --primary-foreground: 0.99 0.01 280;
+        --secondary: 0.92 0.05 320;
+        --secondary-foreground: 0.20 0.02 280;
+        --muted: 0.94 0.03 280;
+        --muted-foreground: 0.50 0.02 280;
+        --accent: 0.88 0.15 340;
+        --accent-foreground: 0.15 0.02 280;
+        --destructive: 0.60 0.25 20;
+        --destructive-foreground: 0.99 0.01 280;
+        --border: 0.88 0.05 280;
+        --input: 0.88 0.05 280;
+        --ring: 0.55 0.20 280;
+        --chart-1: 0.65 0.22 160;
+        --chart-2: 0.60 0.18 200;
+        --chart-3: 0.70 0.20 280;
+        --chart-4: 0.75 0.22 340;
+        --chart-5: 0.68 0.20 40;
+        --sidebar: 0.98 0.02 280;
+        --sidebar-foreground: 0.15 0.02 280;
+        --sidebar-primary: 0.55 0.20 280;
+        --sidebar-primary-foreground: 0.99 0.01 280;
+        --sidebar-accent: 0.92 0.05 320;
+        --sidebar-accent-foreground: 0.20 0.02 280;
+        --sidebar-border: 0.88 0.05 280;
+        --sidebar-ring: 0.55 0.20 280;
+        
+        /* Anime-style cricket colors */
+        --anime-sky-start: 0.75 0.18 240;
+        --anime-sky-mid: 0.70 0.20 280;
+        --anime-sky-end: 0.65 0.22 320;
+        --anime-turf: 0.60 0.25 145;
+        --anime-turf-dark: 0.45 0.22 145;
+        --anime-accent-pink: 0.70 0.25 340;
+        --anime-accent-cyan: 0.75 0.22 200;
+        --anime-accent-yellow: 0.80 0.20 80;
+        --anime-glow: 0.85 0.15 60;
+        --cricket-green: 0.58 0.22 145;
+        --cricket-dark: 0.40 0.20 145;
+        --pitch-brown: 0.50 0.12 45;
+        --stump-red: 0.58 0.25 15;
+        --ball-white: 0.95 0.03 90;
+    }
+
+    .dark {
+        --background: 0.18 0.03 280;
+        --foreground: 0.98 0.02 280;
+        --card: 0.22 0.04 280;
+        --card-foreground: 0.98 0.02 280;
+        --popover: 0.25 0.04 280;
+        --popover-foreground: 0.98 0.02 280;
+        --primary: 0.65 0.22 280;
+        --primary-foreground: 0.98 0.02 280;
+        --secondary: 0.28 0.05 320;
+        --secondary-foreground: 0.98 0.02 280;
+        --muted: 0.28 0.04 280;
+        --muted-foreground: 0.65 0.03 280;
+        --accent: 0.40 0.15 340;
+        --accent-foreground: 0.98 0.02 280;
+        --destructive: 0.65 0.25 20;
+        --destructive-foreground: 0.98 0.02 280;
+        --border: 0.30 0.05 280;
+        --input: 0.30 0.05 280;
+        --ring: 0.65 0.22 280;
+        --chart-1: 0.55 0.22 160;
+        --chart-2: 0.50 0.18 200;
+        --chart-3: 0.60 0.20 280;
+        --chart-4: 0.65 0.22 340;
+        --chart-5: 0.58 0.20 40;
+        --sidebar: 0.22 0.04 280;
+        --sidebar-foreground: 0.98 0.02 280;
+        --sidebar-primary: 0.65 0.22 280;
+        --sidebar-primary-foreground: 0.98 0.02 280;
+        --sidebar-accent: 0.28 0.05 320;
+        --sidebar-accent-foreground: 0.98 0.02 280;
+        --sidebar-border: 0.30 0.05 280;
+        --sidebar-ring: 0.65 0.22 280;
+        
+        /* Anime-style cricket colors for dark mode */
+        --anime-sky-start: 0.35 0.18 240;
+        --anime-sky-mid: 0.30 0.20 280;
+        --anime-sky-end: 0.25 0.22 320;
+        --anime-turf: 0.50 0.25 145;
+        --anime-turf-dark: 0.35 0.22 145;
+        --anime-accent-pink: 0.60 0.25 340;
+        --anime-accent-cyan: 0.65 0.22 200;
+        --anime-accent-yellow: 0.70 0.20 80;
+        --anime-glow: 0.75 0.15 60;
+        --cricket-green: 0.65 0.24 145;
+        --cricket-dark: 0.48 0.22 145;
+        --pitch-brown: 0.45 0.14 45;
+        --stump-red: 0.62 0.26 15;
+        --ball-white: 0.92 0.04 90;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    .text-anime-sky {
+        color: oklch(var(--anime-sky-mid));
+    }
+    .bg-anime-sky {
+        background-color: oklch(var(--anime-sky-mid));
+    }
+    .text-anime-turf {
+        color: oklch(var(--anime-turf));
+    }
+    .bg-anime-turf {
+        background-color: oklch(var(--anime-turf));
+    }
+    .text-anime-pink {
+        color: oklch(var(--anime-accent-pink));
+    }
+    .bg-anime-pink {
+        background-color: oklch(var(--anime-accent-pink));
+    }
+    .text-anime-cyan {
+        color: oklch(var(--anime-accent-cyan));
+    }
+    .bg-anime-cyan {
+        background-color: oklch(var(--anime-accent-cyan));
+    }
+    .text-anime-yellow {
+        color: oklch(var(--anime-accent-yellow));
+    }
+    .bg-anime-yellow {
+        background-color: oklch(var(--anime-accent-yellow));
+    }
+    .text-cricket-green {
+        color: oklch(var(--cricket-green));
+    }
+    .bg-cricket-green {
+        background-color: oklch(var(--cricket-green));
+    }
+    .border-cricket-green {
+        border-color: oklch(var(--cricket-green));
+    }
+    .text-cricket-dark {
+        color: oklch(var(--cricket-dark));
+    }
+    .bg-cricket-dark {
+        background-color: oklch(var(--cricket-dark));
+    }
+    .border-pitch-brown {
+        border-color: oklch(var(--pitch-brown));
+    }
+    .bg-pitch-brown {
+        background-color: oklch(var(--pitch-brown));
+    }
+    .text-stump-red {
+        color: oklch(var(--stump-red));
+    }
+    .bg-stump-red {
+        background-color: oklch(var(--stump-red));
+    }
+    .text-ball-white {
+        color: oklch(var(--ball-white));
+    }
+    .bg-ball-white {
+        background-color: oklch(var(--ball-white));
+    }
+}
+
+@layer components {
+    .anime-stadium-bg {
+        position: relative;
+        background: 
+            linear-gradient(180deg, 
+                oklch(var(--anime-sky-start)) 0%, 
+                oklch(var(--anime-sky-mid)) 40%, 
+                oklch(var(--anime-sky-end)) 70%,
+                oklch(var(--anime-turf) / 0.3) 100%
+            );
+        background-attachment: fixed;
+    }
+    
+    .anime-stadium-bg::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/assets/generated/anime-cricket-stadium-bg.dim_1920x1080.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        z-index: 0;
+        pointer-events: none;
+        will-change: opacity;
+    }
+    
+    .anime-stadium-bg::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 30%, oklch(var(--anime-accent-pink) / 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, oklch(var(--anime-accent-cyan) / 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 80%, oklch(var(--anime-turf) / 0.15) 0%, transparent 60%);
+        z-index: 0;
+        pointer-events: none;
+        animation: anime-glow-pulse 8s ease-in-out infinite;
+        will-change: opacity;
+    }
+    
+    .anime-field-overlay {
+        position: relative;
+        background-image: url('/assets/generated/anime-cricket-field.dim_1200x800.png');
+        background-size: 80%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        opacity: 0.08;
+        will-change: opacity;
+    }
+    
+    .anime-lights-glow {
+        box-shadow: 
+            0 0 30px oklch(var(--anime-glow) / 0.3),
+            0 0 60px oklch(var(--anime-accent-cyan) / 0.2),
+            0 0 90px oklch(var(--anime-accent-pink) / 0.15);
+        animation: stadium-lights-pulse 3s ease-in-out infinite;
+    }
+    
+    .anime-card-glow {
+        box-shadow: 
+            0 4px 20px oklch(var(--anime-accent-cyan) / 0.15),
+            0 0 40px oklch(var(--anime-accent-pink) / 0.1),
+            inset 0 1px 0 oklch(var(--anime-glow) / 0.1);
+        border: 1px solid oklch(var(--anime-accent-cyan) / 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .anime-card-glow:hover {
+        box-shadow: 
+            0 8px 30px oklch(var(--anime-accent-cyan) / 0.25),
+            0 0 60px oklch(var(--anime-accent-pink) / 0.2),
+            inset 0 1px 0 oklch(var(--anime-glow) / 0.2);
+        transform: translateY(-2px);
+    }
+    
+    .anime-gradient-border {
+        position: relative;
+        border: 2px solid transparent;
+        background: 
+            linear-gradient(oklch(var(--card)), oklch(var(--card))) padding-box,
+            linear-gradient(135deg, 
+                oklch(var(--anime-accent-pink)), 
+                oklch(var(--anime-accent-cyan)), 
+                oklch(var(--anime-accent-yellow))
+            ) border-box;
+    }
+    
+    .anime-motion-lines {
+        background-image: 
+            repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                oklch(var(--anime-accent-cyan) / 0.03) 10px,
+                oklch(var(--anime-accent-cyan) / 0.03) 20px
+            );
+        animation: motion-lines-scroll 20s linear infinite;
+        will-change: background-position;
+    }
+    
+    .cricket-upload-zone {
+        position: relative;
+        border: 3px dashed oklch(var(--anime-accent-cyan) / 0.4);
+        background: 
+            linear-gradient(135deg, 
+                oklch(var(--anime-turf) / 0.05), 
+                oklch(var(--anime-accent-pink) / 0.05)
+            ),
+            url('/assets/generated/cricket-wickets.dim_400x300.png');
+        background-size: cover, 50%;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        background-blend-mode: normal, overlay;
+        box-shadow: 
+            0 4px 20px oklch(var(--anime-accent-cyan) / 0.1),
+            inset 0 0 60px oklch(var(--anime-glow) / 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .cricket-upload-zone:hover {
+        border-color: oklch(var(--anime-accent-pink) / 0.6);
+        background: 
+            linear-gradient(135deg, 
+                oklch(var(--anime-turf) / 0.08), 
+                oklch(var(--anime-accent-pink) / 0.08)
+            ),
+            url('/assets/generated/cricket-wickets.dim_400x300.png');
+        background-size: cover, 50%;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        box-shadow: 
+            0 8px 30px oklch(var(--anime-accent-cyan) / 0.2),
+            0 0 60px oklch(var(--anime-accent-pink) / 0.15),
+            inset 0 0 80px oklch(var(--anime-glow) / 0.08);
+    }
+    
+    .anime-banner-wave {
+        animation: banner-wave 4s ease-in-out infinite;
+    }
+    
+    .anime-stadium-lights {
+        background-image: url('/assets/generated/anime-stadium-lights.dim_800x400.png');
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        opacity: 0.12;
+        animation: lights-flicker 5s ease-in-out infinite;
+        will-change: opacity;
+    }
+
+    /* Wide-angle camera styles */
+    .camera-fullscreen-container {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+
+    .camera-fullscreen-card {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .camera-wide-view {
+        aspect-ratio: 21 / 9;
+        width: 100%;
+    }
+
+    .camera-wide-video {
+        object-fit: cover;
+    }
+
+    .camera-preview-glow {
+        box-shadow: 
+            0 0 40px oklch(var(--anime-accent-cyan) / 0.25),
+            0 0 80px oklch(var(--anime-accent-pink) / 0.15),
+            inset 0 0 60px oklch(var(--anime-glow) / 0.1);
+        animation: camera-pulse 3s ease-in-out infinite;
+    }
+}
+
+@keyframes anime-glow-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes stadium-lights-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 30px oklch(var(--anime-glow) / 0.3),
+            0 0 60px oklch(var(--anime-accent-cyan) / 0.2),
+            0 0 90px oklch(var(--anime-accent-pink) / 0.15);
+    }
+    50% {
+        box-shadow: 
+            0 0 40px oklch(var(--anime-glow) / 0.4),
+            0 0 80px oklch(var(--anime-accent-cyan) / 0.3),
+            0 0 120px oklch(var(--anime-accent-pink) / 0.2);
+    }
+}
+
+@keyframes motion-lines-scroll {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+@keyframes banner-wave {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-3px) rotate(1deg);
+    }
+    75% {
+        transform: translateY(3px) rotate(-1deg);
+    }
+}
+
+@keyframes lights-flicker {
+    0%, 100% {
+        opacity: 0.12;
+    }
+    50% {
+        opacity: 0.18;
+    }
+    75% {
+        opacity: 0.10;
+    }
+}
+
+@keyframes camera-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 40px oklch(var(--anime-accent-cyan) / 0.25),
+            0 0 80px oklch(var(--anime-accent-pink) / 0.15),
+            inset 0 0 60px oklch(var(--anime-glow) / 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px oklch(var(--anime-accent-cyan) / 0.35),
+            0 0 100px oklch(var(--anime-accent-pink) / 0.25),
+            inset 0 0 80px oklch(var(--anime-glow) / 0.15);
+    }
+}
