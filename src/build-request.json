@@ -1,70 +1,16 @@
 {
   "kind": "build_request",
-  "title": "Glitch-fix pass for MR.AI UMPIRE (branding + UI/UX/runtime issues)",
+  "title": "Verify all app functions and fix any issues",
   "priority": "normal",
-  "requirements": [
-    {
-      "id": "REQ-1",
-      "text": "Perform an end-to-end QA pass of the app (camera/recording, upload, analysis playback, theme toggle, navigation/back flow) and fix any runtime errors, broken UI states, or obvious regressions found during manual testing.",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "OK CAFFINE NOW IF THERE ARE ANY GLITCHES PLEASE FIX IT"
-        ]
-      },
-      "acceptanceCriteria": [
-        "App loads without console errors in a fresh session (logged out) and after Internet Identity login.",
-        "User can record or select a video, proceed to analysis, and return back without getting stuck or seeing blank screens.",
-        "No repeating/stacking timers or memory leaks are observed during play/pause cycles (intervals are created and cleaned up correctly)."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Fix branding/UI text inconsistencies so the app name is displayed as \"MR.AI UMPIRE\" in the header (and any other visible places) instead of the old name.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "OK CAFFINE NOW IF THERE ARE ANY GLITCHES PLEASE FIX IT"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Header title text displays exactly \"MR.AI UMPIRE\".",
-        "No remaining occurrences of the old app name are visible in the UI."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Resolve obvious frontend code issues that can cause glitches: remove or implement empty placeholder components that are part of the current build (e.g., an empty component file), and ensure the theme toggle behaves correctly when the theme is set to \"system\".",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "OK CAFFINE NOW IF THERE ARE ANY GLITCHES PLEASE FIX IT"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Build succeeds with no TypeScript/ESLint errors introduced by empty/unused components.",
-        "Theme toggle reliably switches between dark and light even when the initial theme is \"system\".",
-        "No blank/empty component renders appear due to placeholder files being imported/used inadvertently."
-      ]
-    }
-  ],
+  "requirements": [],
   "constraints": [
-    "Backend must remain a single Motoko actor in backend/main.mo (no additional backend services).",
-    "Do not edit any files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT; compose existing UI components instead."
+    "Do not edit files under frontend/src/components/ui (read-only).",
+    "Do not edit immutable hook/bootstrap files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Keep backend logic in the single Motoko actor at backend/main.mo; only add backend/migration.mo if an upgrade requires state migration."
   ],
   "nonGoals": [
-    "Adding new major features or changing core product scope beyond fixing glitches.",
-    "Implementing third-party authentication providers (only Internet Identity is in scope).",
-    "Adding external databases or non-Motoko backend services."
+    "Add new product features beyond verifying/fixing existing functionality.",
+    "Introduce new backend services, external databases, or third-party auth providers (only Internet Identity is supported)."
   ],
   "imageRequirements": {
     "required": [],
